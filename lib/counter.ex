@@ -5,7 +5,6 @@ defmodule Counter do
     end)
   end
 
-  @spec tick(atom | pid | port | reference | {atom, atom}) :: any
   def tick(pid) do
     send(pid, {:tick, self()})
   end
